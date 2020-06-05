@@ -1,6 +1,6 @@
 buildscript {
 	def isKotlinDev = kotlinVersion.contains("-release")
-	def isKotlinEAp = kotlinVersion.contains("-eap")
+	def isKotlinEAp = kotlinVersion.contains("-eap") || kotlinVersion.contains("-M")
     repositories {
 		mavenCentral()
 		jcenter()
@@ -30,7 +30,7 @@ apply plugin: 'maven'
 apply plugin: 'maven-publish'
 
 def isKotlinDev = kotlinVersion.contains("-release")
-def isKotlinEAp = kotlinVersion.contains("-eap")
+def isKotlinEAp = kotlinVersion.contains("-eap") || kotlinVersion.contains("-M")
 
 repositories {
     mavenLocal()
